@@ -16,6 +16,7 @@
   "dependencies": {
     "@open-wc/dedupe-mixin": "^1.4.0",
     "@vaadin/router": "^1.7.5",
-    "lit": "^3.1.0"
+    "lit": "^3.1.0",
+    "uuid": "^9.0.1"
   }
 }
