@@ -13,7 +13,7 @@ Utiliza el componente CardProduct para representar todos los productos disponibl
 Proporciona un formulario para dar de alta nuevos productos con los campos: name, image, description y price.
 
 ## Componentes
-- Componente Menu: 
+- Componente HeaderMenu: 
 Renderiza las opciones de menú para navegar entre las páginas Home y Products.
 - Componente CardProduct: 
 Representa un producto con los siguientes elementos:
@@ -37,18 +37,18 @@ Esto se realiza mediante localStorage.getItem("products"), que intenta recuperar
 - Si se encuentra algún producto en el Local Storage (es decir, storedProducts no es nulo), se procede a cargar esos productos en el componente.
 JSON.parse(storedProducts) convierte la cadena JSON almacenada en storedProducts en un objeto JavaScript.
 Los productos cargados se asignan a la propiedad products del componente. Esto garantiza que el componente ahora contiene la información más reciente de los productos almacenados.
-Creación y Almacenamiento de Productos Predeterminados:
 
+## Creación y Almacenamiento de Productos Predeterminados:
 - Si no se encuentran productos en el Local Storage (es decir, storedProducts es nulo), se crea un conjunto predeterminado de productos.
 Estos productos se definen en un array de objetos JavaScript con propiedades como id, name, image, description, y price.
 El array de productos se convierte en una cadena JSON mediante JSON.stringify.
 Esta cadena JSON se almacena en el Local Storage bajo la clave "products".
-Carga de Productos Predeterminados:
 
+## Carga de Productos Predeterminados:
 - Después de almacenar los productos predeterminados en el Local Storage, estos productos también se cargan en la propiedad products del componente.
 Ahora, el componente tiene datos de productos listos para ser utilizados.
-Persistencia del Estado entre Sesiones:
 
+## Persistencia del Estado entre Sesiones:
 **Este enfoque permite que el estado de los productos persista entre las sesiones del usuario. Si el usuario cierra la aplicación y la vuelve a abrir, los productos que había creado o modificado seguirán estando disponibles.**
 
 
