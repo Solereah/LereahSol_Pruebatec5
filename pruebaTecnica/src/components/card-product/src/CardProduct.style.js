@@ -1,117 +1,61 @@
 import { css } from "lit";
 
 export const cardProductStyle = css`
-  :host {
-    height: 420px;
-    width: 654px;
-    margin: 50px auto;
-    border-radius: 7px 7px 7px 7px;
-
-    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  }
-
-  .product-img {
-    float: left;
-    height: 420px;
-    width: 327px;
-  }
-
-  .product-img img {
-    border-radius: 7px 0 0 7px;
-  }
-
-  .product-info {
-    float: left;
-    height: 420px;
-    width: 327px;
-    border-radius: 0 7px 10px 7px;
-    background-color: #ffffff;
-  }
-
-  .product-text {
-    height: 300px;
-    width: 327px;
-  }
-
-  .product-text h1 {
-    margin: 0 0 0 38px;
-    padding-top: 52px;
-    font-size: 34px;
-    color: #474747;
-  }
-
-  .product-text h1,
-  .product-price-btn p {
-    font-family: "Bentham", serif;
-  }
-
-  .product-text h2 {
-    margin: 0 0 47px 38px;
-    font-size: 13px;
-    font-family: "Raleway", sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #d2d2d2;
-    letter-spacing: 0.2em;
-  }
-
-  .product-text p {
-    height: 125px;
-    margin: 0 10px 0 38px;
-    font-family: "Playfair Display", serif;
-    color: #8d8d8d;
-    line-height: 1.7em;
-    font-size: 15px;
-    font-weight: lighter;
+  .simple-card {
+    width: 320px;
+    height: 570px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     overflow: hidden;
+    text-align: center;
   }
 
-  .product-price-btn {
-    height: 103px;
-    width: 327px;
-    margin-top: 17px;
+  .simple-card img {
+    margin-top: 20px;
+    width: 280px;
+    height: 280px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+  .card-content h3 {
+    color: #666;
+  }
+
+  .card-content p {
+    color: #888;
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card-footer {
+    margin-bottom: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
-  .product-price-btn p {
-    top: -13px;
-    height: 50px;
-    font-family: "Trocchi", serif;
-    margin: 0 0 0 38px;
-    font-size: 28px;
-    font-weight: lighter;
-    color: #474747;
+  .card-content .price {
+    font-size: 1.2em;
+    color: #007bff;
   }
 
-  span {
-    height: 50px;
-    font-family: "Suranna", serif;
-    font-size: 34px;
-  }
-
-  button {
-    height: 50px;
-    width: 176px;
-    margin: 0 40px 0 16px;
-    box-sizing: border-box;
-    border: transparent;
-    border-radius: 60px;
-    font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: #ffffff;
-    background-color: #9cebd5;
+  .delete-button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    outline: none;
+    font-size: 1em;
   }
 
-  .delete-item button:hover {
-    background-color: #61b59e;
+  .delete-button:hover {
+    background-color: #c0392b;
   }
 `;

@@ -1,10 +1,10 @@
 export const routes = [
   {
     path: "/",
-    redirect: "/#!home",
+    redirect: "/home",
   },
   {
-    path: "/#!home",
+    path: "/home",
     component: "landing-home",
     action: async () => await import("../pages/landing-home/index.js"),
   },

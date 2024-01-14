@@ -1,4 +1,5 @@
 import { html, LitElement } from "lit";
+import { Router } from "@vaadin/router";
 import { createProductStyle } from "./CreateProducts.sytle";
 import { v4 as uuidv4 } from "uuid";
 export class CreateProducts extends LitElement {
@@ -39,7 +40,7 @@ export class CreateProducts extends LitElement {
     };
 
     this.__saveProductToLocalStorage(newProduct);
-    this.requestUpdate();
+    Router.go("/");
   }
 
   __saveProductToLocalStorage(product) {

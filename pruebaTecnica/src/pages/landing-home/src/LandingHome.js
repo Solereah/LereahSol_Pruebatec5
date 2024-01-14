@@ -42,7 +42,7 @@ export class LandingHome extends LitElement {
 
     localStorage.setItem("products", JSON.stringify(this.products));
 
-    this.requestUpdate();
+    //this.requestUpdate();
   }
 
   render() {

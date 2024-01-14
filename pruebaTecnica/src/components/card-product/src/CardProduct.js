@@ -21,7 +21,6 @@ export class CardProduct extends LitElement {
     this.price = 0;
   }
   __deleteProduct() {
-    console.log("Deleting product with id:", this.id);
     this.dispatchEvent(
       new CustomEvent("delete-product", {
         bubbles: true,
@@ -29,29 +28,19 @@ export class CardProduct extends LitElement {
         detail: { id: this.id },
       })
     );
-    console.log("Event dispatched.");
   }
   render() {
     return html`
       <article>
-        <div class="card-container" id="${this.id}">
-          <div class="product-img">
-            <img src="${this.image}" height="420" width="327" />
-          </div>
-          <div class="product-info">
-            <div class="product-text">
-              <h1>${this.name}</h1>
-              <h2>by Landing Marketplace</h2>
-              <p>${this.description}</p>
-            </div>
-            <div class="product-price-btn">
-              <p><span>${this.price}</span>$</p>
-              <button
-                type="button"
-                @click="${this.__deleteProduct}"
-                class="delete-item"
-              >
-                Delete
+        <div class="simple-card">
+          <img src="${this.image}" alt="${this.name}" />
+          <div class="card-content">
+            <h3>${this.name}</h3>
+            <p>${this.description}</p>
+            <div class="card-footer">
+              <p class="price">$${this.price}</p>
+              <button class="delete-button" @click="${this.__deleteProduct}">
+                Delete Product
               </button>
             </div>
           </div>
