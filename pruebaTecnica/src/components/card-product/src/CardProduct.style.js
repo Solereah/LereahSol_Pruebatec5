@@ -1,7 +1,7 @@
 import { css } from "lit";
 
 export const cardProductStyle = css`
-  .card-container {
+  :host {
     height: 420px;
     width: 654px;
     margin: 50px auto;
