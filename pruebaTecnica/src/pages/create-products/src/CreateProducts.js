@@ -65,7 +65,7 @@ export class CreateProducts extends LitElement {
         <textarea
           id="description"
           name="description"
-          rows="4"
+          rows="5"
           required
         ></textarea>
 

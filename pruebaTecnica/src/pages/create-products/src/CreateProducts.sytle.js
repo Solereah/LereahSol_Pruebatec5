@@ -26,6 +26,10 @@ export const createProductStyle = css`
     font-weight: bold;
     color: #333;
   }
+  textarea {
+    width: 297px;
+    height: 93px;
+  }
 
   input {
     width: 100%;
@@ -37,7 +41,7 @@ export const createProductStyle = css`
   }
 
   button {
-    background-color: #4caf50;
+    background-color: #04879c;
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -46,6 +50,6 @@ export const createProductStyle = css`
   }
 
   button:hover {
-    background-color: #45a049;
+    background-color: #046978;
   }
 `;
