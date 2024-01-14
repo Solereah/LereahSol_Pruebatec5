@@ -1,6 +1,6 @@
 import { html, LitElement } from "lit";
 import "../../../components/card-product";
-import { landingHomeStyle } from "./LandingHome.style";
+import { landingHomeStyle } from "./LandingHome.style.js";
 export class LandingHome extends LitElement {
   static styles = landingHomeStyle;
   static properties = {
@@ -19,7 +19,6 @@ export class LandingHome extends LitElement {
     if (storedProducts) {
       this.products = JSON.parse(storedProducts);
     } else {
-      // Si no hay productos en el localStorage, asigno los productos predeterminados
       this.products = [
         {
           name: "Producto 1",
@@ -29,9 +28,21 @@ export class LandingHome extends LitElement {
           price: "$49.99",
         },
       ];
-      // Guardo los productos predeterminados en el localStorage
+
       localStorage.setItem("products", JSON.stringify(this.products));
     }
+  }
+
+  __handleDeleteProduct(event) {
+    const productIdToDelete = event.detail.id;
+
+    this.products = this.products.filter(
+      (product) => product.id !== productIdToDelete
+    );
+
+    localStorage.setItem("products", JSON.stringify(this.products));
+
+    this.requestUpdate();
   }
 
   render() {
@@ -48,6 +59,7 @@ export class LandingHome extends LitElement {
                 .image="${image}"
                 .description="${description}"
                 .price="${price}"
+                @delete-product="${this.__handleDeleteProduct}"
               ></card-product>
             `;
           })}

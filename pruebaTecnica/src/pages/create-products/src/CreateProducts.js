@@ -37,20 +37,16 @@ export class CreateProducts extends LitElement {
       description,
       price,
     };
-    console.log(newProduct);
-    // Guardar en el localStorage
+
     this.__saveProductToLocalStorage(newProduct);
-    this.requestUpdate(); // Forzar un nuevo render
+    this.requestUpdate();
   }
 
   __saveProductToLocalStorage(product) {
-    // Obtener los productos existentes del localStorage
     const existingProducts = JSON.parse(localStorage.getItem("products")) || [];
 
-    // Agregar el nuevo producto a la lista existente
     existingProducts.push(product);
 
-    // Guardar la lista actualizada en el localStorage
     localStorage.setItem("products", JSON.stringify(existingProducts));
   }
 
