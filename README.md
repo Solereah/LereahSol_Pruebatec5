@@ -7,6 +7,8 @@ En esta sección, encontrarás todos los productos disponibles en nuestro market
 ![Home Page](capturasPantalla/landingMarketplace.png)
 Utiliza el componente CardProduct para representar todos los productos disponibles en el marketplace.
 
+# Products
+![Home Page](capturasPantalla/form.png)
 - CreateProducts
 Proporciona un formulario para dar de alta nuevos productos con los campos: name, image, description y price.
 
