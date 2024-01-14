@@ -38,7 +38,7 @@ export class CardProduct extends LitElement {
             <h3>${this.name}</h3>
             <p>${this.description}</p>
             <div class="card-footer">
-              <p class="price">$${this.price}</p>
+              <p class="price">€${this.price}</p>
               <button class="delete-button" @click="${this.__deleteProduct}">
                 Delete Product
               </button>

@@ -42,11 +42,11 @@ export const cardProductStyle = css`
 
   .card-content .price {
     font-size: 1.2em;
-    color: #007bff;
+    color: #0766ad;
   }
 
   .delete-button {
-    background-color: #e74c3c;
+    background-color: #f30a49;
     color: #fff;
     padding: 8px 12px;
     border: none;
@@ -56,6 +56,6 @@ export const cardProductStyle = css`
   }
 
   .delete-button:hover {
-    background-color: #c0392b;
+    background-color: #c00d3c;
   }
 `;

@@ -9,7 +9,7 @@ export const headerMenuStyle = css`
   nav {
     display: flex;
     justify-content: flex-end;
-    background-color: #0b666a;
+    background-color: #0766ad;
   }
 
   ul {

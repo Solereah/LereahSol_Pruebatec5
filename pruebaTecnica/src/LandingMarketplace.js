@@ -2,6 +2,7 @@ import { LitElement, html } from "lit";
 import { RouterMixin } from "./router/RouterMixin";
 import { routes } from "./router/routes.js";
 import "./components/header-menu/index.js";
+import "./components/footer-component/index.js";
 
 export class LandingMarketplace extends RouterMixin(LitElement) {
   static properties = {
@@ -20,7 +21,7 @@ export class LandingMarketplace extends RouterMixin(LitElement) {
           <header-menu></header-menu>
         </header>
         <main id="outlet"></main>
-        <footer></footer>
+        <footer><footer-component></footer-component></footer>
       </section>
     `;
   }
